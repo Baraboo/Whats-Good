@@ -1,0 +1,524 @@
+<html>
+<head>
+  <title> What's Good </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+    .main-text {
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+      margin-top: 15%;
+      font-size: 10em;
+      text-decoration-color: white;
+    }
+    html,body {
+      height: 100%;
+    background: #110101;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    }
+    table {
+    border-collapse:collapse;
+    border-spacing:0;
+    }
+    fieldset,img {
+    border:0;
+    }
+    address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+    }
+    caption,th {
+    text-align:left;
+    }
+    q:before,q:after {
+    content:'';
+    }
+    abbr,acronym { border:0;
+    }
+
+    body{
+      background: #110101;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    .ie7 body{
+    overflow:hidden;
+    }
+    .container{
+    position: relative;
+    text-align: center;
+    }
+    .clr{
+    clear: both;
+    }
+    .container > header{
+    padding: 30px 30px 10px 20px;
+    margin: 0px 20px 10px 20px;
+    position: relative;
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+    }
+    .container > header h1{
+    font-family: "helvetica neue", helvetica;
+    font-size: 35px;
+    line-height: 35px;
+    position: relative;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    padding: 0px 0px 5px 0px;
+    }
+    .container > header h1 span{
+
+    }
+    .container > header h2, p.info{
+    font-size: 16px;
+    font-style: italic;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    }
+
+    .slideshow,
+    .slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    }
+    .slideshow:after {
+    content: '';
+    background: transparent repeat top left;
+    }
+    .slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+    }
+    .slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+    }
+    .slideshow li div h3 {
+    font-family: "helvetica neue", helvetica;
+    text-transform: uppercase;
+    font-size: 80px;
+    padding: 0;
+    line-height: 200px;
+    color: rgba(255,255,255, 0.8);
+    }
+    .slideshow li:nth-child(1) span { background-image: url(http://24.media.tumblr.com/6ddffd6a6036f61a1f2b1744bad77730/tumblr_mzgz9vJ1CK1st5lhmo1_1280.jpg) }
+    .slideshow li:nth-child(2) span {
+    background-image: url(http://25.media.tumblr.com/aff8a8a33156a0eda844140764fd4359/tumblr_mzgz3tBAAU1st5lhmo1_1280.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+    }
+    .slideshow li:nth-child(3) span {
+    background-image: url('http://24.media.tumblr.com/f87b54bbce49e59debf7606662f54862/tumblr_n0hpxxDOJ91st5lhmo1_1280.jpg');
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+    }
+    .slideshow li:nth-child(4) span {
+    background-image: url(http://24.media.tumblr.com/0df0b55a4615378cf593241bad80a7da/tumblr_n0hpwpZrVc1st5lhmo1_1280.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+    }
+    .slideshow li:nth-child(5) span {
+    background-image: url(http://24.media.tumblr.com/b94dbb2a392198d5cc39c19959598229/tumblr_n0hpthN8VH1st5lhmo1_1280.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+    }
+    .slideshow li:nth-child(6) span {
+    background-image: url(http://31.media.tumblr.com/67d222ee577fc35faca83f0e08efc48e/tumblr_mzzqt7wyEU1st5lhmo1_1280.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+    }
+    .slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+    }
+    .slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+    }
+    .slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+    }
+    .slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+    }
+    .slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+    }
+    /* Animation for the slideshow images */
+    @-webkit-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+    }
+    8% {
+      opacity: 1;
+      -webkit-transform: scale(1.05);
+      -webkit-animation-timing-function: ease-out;
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: scale(1.1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: scale(1.1);
+    }
+    100% { opacity: 0 }
+    }
+    @-moz-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -moz-animation-timing-function: ease-in;
+    }
+    8% {
+      opacity: 1;
+      -moz-transform: scale(1.05);
+      -moz-animation-timing-function: ease-out;
+    }
+    17% {
+      opacity: 1;
+      -moz-transform: scale(1.1);
+    }
+    25% {
+      opacity: 0;
+      -moz-transform: scale(1.1);
+    }
+    100% { opacity: 0 }
+    }
+    @-o-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -o-animation-timing-function: ease-in;
+    }
+    8% {
+      opacity: 1;
+      -o-transform: scale(1.05);
+      -o-animation-timing-function: ease-out;
+    }
+    17% {
+      opacity: 1;
+      -o-transform: scale(1.1);
+    }
+    25% {
+      opacity: 0;
+      -o-transform: scale(1.1);
+    }
+    100% { opacity: 0 }
+    }
+    @-ms-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -ms-animation-timing-function: ease-in;
+    }
+    8% {
+      opacity: 1;
+      -ms-transform: scale(1.05);
+      -ms-animation-timing-function: ease-out;
+    }
+    17% {
+      opacity: 1;
+      -ms-transform: scale(1.1);
+    }
+    25% {
+      opacity: 0;
+      -ms-transform: scale(1.1);
+    }
+    100% { opacity: 0 }
+    }
+    @keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    8% {
+      opacity: 1;
+      transform: scale(1.05);
+      animation-timing-function: ease-out;
+    }
+    17% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    25% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% { opacity: 0 }
+    }
+    /* Animation for the title */
+    @-webkit-keyframes titleAnimation {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(200px);
+    }
+    8% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+    }
+    19% { opacity: 0 }
+    25% {
+      opacity: 0;
+      -webkit-transform: scale(10);
+    }
+    100% { opacity: 0 }
+    }
+    @-moz-keyframes titleAnimation {
+    0% {
+      opacity: 0;
+      -moz-transform: translateY(200px);
+    }
+    8% {
+      opacity: 1;
+      -moz-transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -moz-transform: scale(1);
+    }
+    19% { opacity: 0 }
+    25% {
+      opacity: 0;
+      -moz-transform: scale(10);
+    }
+    100% { opacity: 0 }
+    }
+    @-o-keyframes titleAnimation {
+    0% {
+      opacity: 0;
+      -o-transform: translateY(200px);
+    }
+    8% {
+      opacity: 1;
+      -o-transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -o-transform: scale(1);
+    }
+    19% { opacity: 0 }
+    25% {
+      opacity: 0;
+      -o-transform: scale(10);
+    }
+    100% { opacity: 0 }
+    }
+    @-ms-keyframes titleAnimation {
+    0% {
+      opacity: 0;
+      -ms-transform: translateY(200px);
+    }
+    8% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -ms-transform: scale(1);
+    }
+    19% { opacity: 0 }
+    25% {
+      opacity: 0;
+      -webkit-transform: scale(10);
+    }
+    100% { opacity: 0 }
+    }
+    @keyframes titleAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    8% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    19% { opacity: 0 }
+    25% {
+      opacity: 0;
+      transform: scale(10);
+    }
+    100% { opacity: 0 }
+    }
+    /* Show at least something when animations not supported */
+    .no-cssanimations .slideshow li span{
+    opacity: 1;
+    }
+    @media screen and (max-width: 1140px) {
+    .slideshow li div h3 { font-size: 100px }
+    }
+    @media screen and (max-width: 600px) {
+    .slideshow li div h3 { font-size: 50px }
+    }
+
+    body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg) no-repeat center center fixed; background-size:cover;}
+
+    .search {width: 500px;height: 5vh;margin: 150px auto;background: #444;background: rgba(0,0,0,.2);border-radius:  3px;border: 4px solid #fff;}
+
+    .search input {width: 370px;padding: 10px 4px;float: left;color: #ccc;border: 0;background: transparent;border-radius: 3px 0 0 3px; font-size: 1.5em;}
+
+    .search input:focus {outline: 0;background:transparent; font-size: 1.5em;}
+
+    .search button {font-size: 1.5em;position: relative;float: right;border: 0;padding: 0;cursor: pointer;height: 5vh;width: 6vw;color: #fff;background: transparent;border-left: 1px solid #fff;border-radius: 0 3px 3px 0;}
+
+    .search button:hover {background: #fff;color:#444;}
+    .search button:active {box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);}
+
+    .search button:focus {outline: 0;}
+  </style>
+
+</head>
+<body>
+  <template id="restaurants">
+    <option>Taaza Thindi</option>
+    <option>The Hole in the Wall Cafe</option>
+    <option>Indian Paratha Company</option>
+    <option>Shri Sagar (CTR)</option>
+    <option>BYLI - Bet You Love It!</option>
+    <option>Big Pitcher</option>
+    <option>Sultans of Spice</option>
+    <option>Cilantro</option>
+    <option>AB's - Absolute Barbecues</option>
+    <option>The Fisherman's Wharf</option>
+    <option>Truffles</option>
+    <option>Onesta</option>
+    <option>Glen's Bakehouse</option>
+    <option>Smally's Resto Cafe</option>
+    <option>Cafe Max</option>
+    <option>Chili's</option>
+    <option>Faasco's</option>
+    <option>Nando's</option>
+    <option>Vinny's</option>
+    <option>Fava's</option>
+    <option>Flechazo</option>
+    <option>Toit</option>
+    <option>Three Dots and a Dash</option>
+    <option>Koramangala Social</option>
+    <option>Communiti</option>
+    <option>Big Brewsky</option>
+    <option>Vapour</option>
+    <option>The Black Rabbit</option>
+    <option>Hard Rock Cafe</option>
+    <option>Over The Top Terrace Lounge</option>
+    <option>Windmills Craftsworks</option>
+    <option>The Fatty Bao</option>
+    <option>Soho St.</option>
+    <option>Fenny's</option>
+    <option>Three Quarter Chinese</option>
+  </template>
+  <datalist id="searchresults"></datalist>
+  <ul class="slideshow">
+    <li><span>Image 01</span></li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+    <li><span>Image 06</span></li>
+  </ul>
+  <div class="container">
+      <h1 class="main-text">What's Good?</h1>
+      <form class="search" action="" method="POST">
+  <input type="search" list="searchresults" autocomplete="off" placeholder="Enter Restaurant" name="restaurant" id="search" required>
+  <button type="submit" name="my-form">Find Food</button>
+</form>
+  </div>
+  <script>
+  var search = document.querySelector('#search');
+  var results = document.querySelector('#searchresults');
+  var templateContent = document.querySelector('#restaurants').content;
+  search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var clonedOptions = templateContent.cloneNode(true);
+    var set = Array.prototype.reduce.call(clonedOptions.children, function searchFilter(frag, el) {
+        if (inputVal.test(el.textContent) && frag.children.length < 5) frag.appendChild(el);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+  });
+  </script>
+</body>
+</html>

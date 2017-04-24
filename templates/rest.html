@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title> What's Good </title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #03A9F4;
+      font-family: 'Roboto', sans-serif;
+      text-decoration-color: white;
+    }
+    h1, h2, h3, p{
+      text-align: center;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      white-space: pre;
+    }
+    p{
+      text-align: left;
+      white-space: normal;
+      font-family: 'Roboto', sans-serif;
+    }
+    strong, span {
+      font-weight: 600;
+      font-size: 1.6em;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="margin: 0 auto; text-align:center;">{{name}}</h1>
+  <br><br><br>
+  <div style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);  min-width: 80vw; margin: 0 auto;background-size:cover; min-height: 30vh; max-width: 80vw; max-height: 50vh ; background-repeat: no-repeat; {{imgsrc}}">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <h1 style="font-size: 3em;">Food    :   {{food_rating}}</h1>
+  <h3><strong>People recommend:</strong> {{r_food}}</h3><hr>
+  <h1 style="font-size: 3em;">Service   :   {{service_rating}}</h1>
+  <h3><strong>Service Reviews:</strong> {{r_service}}</h3><hr>
+  <h1 style="font-size: 3em;">Ambience    :  {{ambience_rating}}</h1>
+  <h3><strong>What people like:</strong> {{r_ambience}}</h3>
+  <h2>Cost   :   {{cost}}</h3>
+  <br><br><hr></hr><br><br>
+  <h1 style="text-align:left; left:10vw;">Top 10 Reviews</h1>
+  <br><br>
+  <p><span style="font-size=1.5em;">Review 1:</span> <br> {{review1}} </p><br>
+  <p><span style="font-size=1.5em;">Review 2:</span> <br>  {{review2}} </p><br>
+  <p><span style="font-size=1.5em;">Review 3:</span> <br>  {{review3}} </p><br>
+  <p><span style="font-size=1.5em;">Review 4:</span> <br>  {{review4}} </p><br>
+  <p><span style="font-size=1.5em;">Review 5:</span> <br>  {{review5}} </p><br>
+  <p><span style="font-size=1.5em;">Review 6:</span> <br>  {{review6}} </p><br>
+  <p><span style="font-size=1.5em;">Review 7:</span> <br>  {{review7}} </p><br>
+  <p><span style="font-size=1.5em;">Review 8:</span> <br>  {{review8}} </p><br>
+  <p><span style="font-size=1.5em;">Review 9:</span> <br>  {{review9}} </p><br>
+  <p><span style="font-size=1.5em;">Review 10:</span> <br>  {{review10}} </p>
+
+</body>
+</html>
