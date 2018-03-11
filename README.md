@@ -8,4 +8,4 @@ The project is a web-app running on the Flask web framework, all the reviews are
 
 Technologies Used: Python Flask, HTML5, CSS3, BeautifulSoup, Stanford Parser.
 
-[ScreenShot](https://cdn.pbrd.co/images/8i47kvz5I.png)
+![ScreenShot](https://cdn.pbrd.co/images/8i47kvz5I.png)
