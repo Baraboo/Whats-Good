@@ -1,5 +1,7 @@
 # What's Good?
 
+Note: This project was done long before [Zomato](https://www.zomato.com) had the features this project has.
+
 A web-app that tells you what's good at a specified restaurant.
 
 The project used the Stanford Log-Linear Part-Of-Speech tagger from the Stanford NLP Libraries, to tag reviews of a particular restaurant and tell a user what most customer liked at the restaurant.
